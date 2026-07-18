@@ -1,36 +1,82 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# CELPIP Decoded
 
-## Getting Started
+You're not bad at English. You just don't know how CELPIP wants you to answer.
 
-First, run the development server:
+CELPIP Decoded is an independent CELPIP preparation and practice platform. It helps test-takers understand what each task is asking, structure stronger answers, and improve with clear, AI-supported feedback. Practice CELPIP speaking and writing with guided test-style tasks, timed sessions, transcripts, and feedback reports.
+
+CELPIP Decoded is not affiliated with or endorsed by CELPIP and does not provide official CELPIP scores.
+
+## Technology stack
+
+- Next.js 16 (App Router) and React 19
+- TypeScript
+- Tailwind CSS 4
+- Supabase (auth, Postgres, private storage, row level security)
+- OpenAI (transcription, speaking scoring, writing evaluation)
+- Zod for input validation
+
+## Available modules
+
+- CELPIP Speaking Practice: timed prompts, in-browser recording, private audio storage, transcription, and AI-supported feedback with practice-level estimates and badges.
+- CELPIP Writing Practice: timed writing tasks with word targets and AI-supported evaluation.
+- Reading and Listening: planned for later tickets.
+
+## Local setup
+
+1. Install dependencies:
+   ```bash
+   npm install
+   ```
+2. Copy the environment template and fill in your own values:
+   ```bash
+   cp .env.example .env.local
+   ```
+3. Run the development server:
+   ```bash
+   npm run dev
+   ```
+4. Open http://localhost:3000.
+
+## Environment variables
+
+Set these in `.env.local` (see `.env.example`). Never commit real values.
+
+| Variable | Scope | Purpose |
+| --- | --- | --- |
+| `NEXT_PUBLIC_SUPABASE_URL` | client and server | Supabase project URL |
+| `NEXT_PUBLIC_SUPABASE_ANON_KEY` | client and server | Supabase anon public key |
+| `SUPABASE_SERVICE_ROLE_KEY` | server only | Supabase service role key |
+| `NEXT_PUBLIC_APP_URL` | client and server | Base URL of the app |
+| `OPENAI_API_KEY` | server only | OpenAI API key |
+| `OPENAI_TRANSCRIPTION_MODEL` | server only | Model for audio transcription |
+| `OPENAI_SCORING_MODEL` | server only | Model for speaking scoring |
+| `OPENAI_WRITING_MODEL` | server only | Model for writing evaluation |
+
+## Security rules
+
+- `SUPABASE_SERVICE_ROLE_KEY` is server only and is read only in `src/lib/supabase/admin.ts`. Never import it into client components.
+- `OPENAI_API_KEY` and the OpenAI model variables are server only.
+- Never print or log real secret values.
+- Never commit `.env.local`.
+- The `attempt-audio` storage bucket is private. Audio is served through signed URLs only. Never enable public access.
+- Row level security is enabled on every table with owner-scoped policies. Do not weaken these policies.
+
+## Supabase setup
+
+See `docs/deployment/supabase-celpip-decoded.md` for creating the project, applying the foundation migration, verifying the private storage bucket, and configuring environment variables.
+
+## Testing commands
 
 ```bash
+npm run lint
+npm run build
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Deployment
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+The app is designed to deploy on Vercel. Configure the environment variables above in the Vercel project settings, then redeploy. See the Supabase setup document for the full checklist.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Independent practice disclaimer
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+CELPIP Decoded provides practice tasks, practice-level estimates, and AI-supported feedback for preparation only. These are not official CELPIP scores. CELPIP Decoded is not affiliated with or endorsed by CELPIP.

@@ -1,14 +1,13 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import Link from "next/link";
 import { redirect } from "next/navigation";
 import { createSupabaseServerClient } from "@/lib/supabase/server";
 import { LoginForm } from "@/components/auth/LoginForm";
+import { BrandMark } from "@/components/brand/BrandMark";
 
 export const metadata: Metadata = {
-  title: "Sign in - Toronto Academy of Education",
-  description:
-    "Sign in to your Toronto Academy CELPIP Preparation Program account.",
+  title: "Sign in",
+  description: "Sign in to your CELPIP Decoded practice account.",
 };
 
 export default async function LoginPage() {
@@ -28,18 +27,15 @@ export default async function LoginPage() {
         <div className="text-center">
           <Link
             href="/"
-            className="inline-flex flex-col items-center gap-3 text-sm font-semibold uppercase tracking-[0.2em] text-brand"
+            className="inline-flex flex-col items-center gap-3"
+            aria-label="CELPIP Decoded home"
           >
-            <Image
-              src="/favicon.png"
-              alt="Toronto Academy of Education logo"
-              width={48}
-              height={48}
-              className="h-12 w-12 rounded-xl"
-            />
-            Toronto Academy of Education
+            <BrandMark size={48} className="rounded-xl" />
+            <span className="text-lg font-semibold tracking-tight text-ink">
+              CELPIP <span className="font-bold text-brand">Decoded</span>
+            </span>
           </Link>
-          <h1 className="mt-4 font-serif text-3xl font-semibold tracking-tight text-ink">
+          <h1 className="mt-4 text-3xl font-semibold tracking-tight text-ink">
             Welcome back
           </h1>
           <p className="mt-2 text-sm leading-6 text-ink/70">

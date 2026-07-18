@@ -1,19 +1,25 @@
 @import "tailwindcss";
 
 :root {
-  /* Warm editorial palette inspired by the Canva reference. */
-  --background: #f7f2e7;
-  --foreground: #1a1712;
+  /* CELPIP Decoded palette. Compatibility token names (brand, ink, cream)
+     are preserved so existing components keep working, remapped to the new
+     three-colour system. */
 
-  /* Warm terracotta accent used for the pricing block and buttons. */
-  --brand: #c1743a;
-  --brand-dark: #a25e2c;
+  /* Warm off-white page background and near-navy body text. */
+  --background: #f4f1ea;
+  --foreground: #12314f;
 
-  /* Section tones. */
-  --cream: #f7f2e7;
-  --cream-soft: #efe7d3;
-  --ink: #17140f;
-  --ink-soft: #221d16;
+  /* Emerald-teal used for primary actions, accents, and success states. */
+  --brand: #0e9f6e;
+  --brand-dark: #0b7e57;
+
+  /* Warm off-white section tones. */
+  --cream: #f4f1ea;
+  --cream-soft: #eae5d6;
+
+  /* Ink navy used for dark sections, navigation, and headings. */
+  --ink: #12314f;
+  --ink-soft: #0e2740;
 }
 
 @theme inline {
@@ -25,8 +31,10 @@
   --color-cream-soft: var(--cream-soft);
   --color-ink: var(--ink);
   --color-ink-soft: var(--ink-soft);
-  --font-sans: var(--font-geist-sans);
-  --font-serif: var(--font-fraunces);
+  /* Inter drives every text style. The serif token is aliased to the same
+     humanist sans so legacy font-serif utilities render Inter, not a serif. */
+  --font-sans: var(--font-inter);
+  --font-serif: var(--font-inter);
   --font-mono: var(--font-geist-mono);
 }
 
@@ -37,5 +45,11 @@ html {
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
+  font-family: var(--font-inter), "Segoe UI", system-ui, Arial, sans-serif;
+}
+
+/* Visible keyboard focus states across the app. */
+:focus-visible {
+  outline: 2px solid var(--brand);
+  outline-offset: 2px;
 }

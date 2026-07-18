@@ -4,7 +4,7 @@ import { createSupabaseServerClient } from "@/lib/supabase/server";
 import { ModuleCard, type Module } from "@/components/app/ModuleCard";
 
 export const metadata: Metadata = {
-  title: "Dashboard - Toronto Academy of Education",
+  title: "Dashboard",
   description: "Your CELPIP practice dashboard.",
 };
 

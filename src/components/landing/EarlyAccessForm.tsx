@@ -98,13 +98,13 @@ export function EarlyAccessForm() {
 
       <div className="relative mx-auto grid w-full max-w-6xl gap-12 px-5 py-20 sm:px-8 sm:py-28 lg:grid-cols-2 lg:gap-16">
         <div className="lg:pt-6">
-          <Eyebrow className="text-brand">Program inquiry</Eyebrow>
-          <h2 className="mt-5 font-serif text-4xl font-semibold leading-tight tracking-tight text-cream sm:text-5xl">
-            Get CELPIP program information
+          <Eyebrow className="text-brand">Early access</Eyebrow>
+          <h2 className="mt-5 text-4xl font-bold leading-tight tracking-tight text-cream sm:text-5xl">
+            Tell us about your CELPIP goal
           </h2>
           <p className="mt-6 max-w-md text-lg leading-8 text-cream/75">
-            Share your CELPIP goal and our team will use your answers to guide
-            the next step.
+            Share where you are with CELPIP and we will use your answers to
+            shape the practice experience.
           </p>
         </div>
 
@@ -125,12 +125,11 @@ export function EarlyAccessForm() {
                   />
                 </svg>
               </div>
-              <h3 className="mt-5 font-serif text-2xl font-semibold text-foreground">
+              <h3 className="mt-5 text-2xl font-semibold text-foreground">
                 Thank you. Your information has been received.
               </h3>
               <p className="mt-3 text-sm text-foreground/60">
-                Our team will review your answers and follow up with the next
-                step.
+                We will review your answers and follow up with the next step.
               </p>
             </div>
           ) : (
@@ -286,14 +285,12 @@ export function EarlyAccessForm() {
                 disabled={status === "submitting"}
                 className="mt-8 inline-flex h-13 w-full items-center justify-center rounded-full bg-brand px-8 py-3.5 text-base font-semibold text-white shadow-sm transition-colors hover:bg-brand-dark disabled:cursor-not-allowed disabled:opacity-70"
               >
-                {status === "submitting"
-                  ? "Submitting..."
-                  : "Request program information"}
+                {status === "submitting" ? "Submitting..." : "Request access"}
               </button>
 
               <p className="mt-4 text-center text-xs leading-5 text-foreground/50">
-                We will only use your details to contact you about the CELPIP
-                Preparation Program.
+                We will only use your details to contact you about CELPIP
+                Decoded practice.
               </p>
             </form>
           )}

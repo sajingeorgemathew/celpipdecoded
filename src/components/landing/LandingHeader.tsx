@@ -1,14 +1,13 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
+import { BrandLogo } from "@/components/brand/BrandLogo";
 
 const navLinks = [
-  { label: "Program", href: "#program" },
-  { label: "AI Practice", href: "#ai-practice" },
-  { label: "Live Classes", href: "#live-classes" },
-  { label: "Pricing", href: "#pricing" },
+  { label: "How it works", href: "#how-it-works" },
+  { label: "Speaking", href: "#modules" },
+  { label: "Writing", href: "#modules" },
 ];
 
 export function LandingHeader() {
@@ -24,26 +23,19 @@ export function LandingHeader() {
         <Link
           href="/"
           onClick={closeMenu}
-          className="flex min-w-0 items-center gap-3"
+          className="flex min-w-0 items-center"
+          aria-label="CELPIP Decoded home"
         >
-          <Image
-            src="/taelogo.jpg"
-            alt="Toronto Academy of Education logo"
-            width={64}
-            height={48}
-            className="h-10 w-auto shrink-0 rounded-lg object-contain sm:h-11"
-          />
-          <span className="hidden text-sm font-semibold leading-tight tracking-tight sm:block lg:text-base">
-            Toronto Academy of Education
-          </span>
+          <BrandLogo variant="dark" className="hidden sm:inline-flex" />
+          <BrandLogo variant="dark" compact className="sm:hidden" />
         </Link>
 
         <nav aria-label="Main" className="hidden items-center gap-6 lg:flex">
           {navLinks.map((link) => (
             <a
-              key={link.href}
+              key={link.label}
               href={link.href}
-              className="text-sm font-medium text-cream/80 transition-colors hover:text-cream"
+              className="text-sm font-semibold text-cream/80 transition-colors hover:text-cream"
             >
               {link.label}
             </a>
@@ -111,10 +103,10 @@ export function LandingHeader() {
           <div className="flex flex-col">
             {navLinks.map((link) => (
               <a
-                key={link.href}
+                key={link.label}
                 href={link.href}
                 onClick={closeMenu}
-                className="border-b border-cream/10 py-4 text-base font-medium text-cream/85 transition-colors hover:text-cream"
+                className="border-b border-cream/10 py-4 text-base font-semibold text-cream/85 transition-colors hover:text-cream"
               >
                 {link.label}
               </a>
@@ -122,7 +114,7 @@ export function LandingHeader() {
             <Link
               href="/login"
               onClick={closeMenu}
-              className="py-4 text-base font-medium text-cream/85 transition-colors hover:text-cream sm:hidden"
+              className="py-4 text-base font-semibold text-cream/85 transition-colors hover:text-cream sm:hidden"
             >
               Sign in
             </Link>

@@ -15,7 +15,7 @@ import {
 import { buildProgressSummary } from "@/features/speaking/progress-summary";
 
 export const metadata: Metadata = {
-  title: "Speaking Attempt History - Toronto Academy of Education",
+  title: "Speaking Attempt History",
   description:
     "Review your completed speaking practice attempts and return to feedback reports.",
 };

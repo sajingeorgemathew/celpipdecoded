@@ -1,8 +1,8 @@
-import Image from "next/image";
 import Link from "next/link";
+import { BrandLogo } from "@/components/brand/BrandLogo";
 import { SignOutButton } from "./SignOutButton";
 
-// App header for signed in screens. Shows the product name, the signed in
+// App header for signed in screens. Shows the product logo, the signed in
 // user's email, and a sign out button.
 export function AppHeader({ userEmail }: { userEmail: string }) {
   return (
@@ -10,18 +10,10 @@ export function AppHeader({ userEmail }: { userEmail: string }) {
       <div className="mx-auto flex w-full max-w-6xl flex-wrap items-center justify-between gap-3 px-5 py-4 sm:px-8">
         <Link
           href="/dashboard"
-          className="flex min-w-0 items-center gap-2.5 text-sm font-semibold tracking-tight text-ink sm:text-base"
+          className="flex min-w-0 items-center"
+          aria-label="CELPIP Decoded dashboard"
         >
-          <Image
-            src="/favicon.png"
-            alt="Toronto Academy of Education logo"
-            width={32}
-            height={32}
-            className="h-8 w-8 shrink-0 rounded-md"
-          />
-          <span className="min-w-0 leading-tight">
-            Toronto Academy of Education
-          </span>
+          <BrandLogo />
         </Link>
 
         <div className="flex items-center gap-3">

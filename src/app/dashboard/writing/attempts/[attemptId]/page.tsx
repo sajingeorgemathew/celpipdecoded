@@ -23,7 +23,7 @@ import {
 } from "@/features/writing/writing-scoring-schema";
 
 export const metadata: Metadata = {
-  title: "Your Writing Feedback - Toronto Academy of Education",
+  title: "Your Writing Feedback",
   description:
     "Review AI-supported practice feedback for your CELPIP writing attempt.",
 };

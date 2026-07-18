@@ -171,7 +171,7 @@ export const resultCopy = {
   levelHeading: "Estimated practice level",
   levelScale: "out of 12",
   practiceEstimateNote:
-    "This estimated level is a practice guide from the Toronto Academy CELPIP Preparation Program. It is not an official CELPIP score.",
+    "This estimated level is a practice guide from CELPIP Decoded. It is not an official CELPIP score.",
   skillBreakdownHeading: "Skill breakdown",
   skillScoreScale: "/ 12",
   improvementLabel: "Try this next",
