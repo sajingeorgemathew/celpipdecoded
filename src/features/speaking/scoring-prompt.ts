@@ -39,7 +39,7 @@ const RESPONSE_SHAPE = `{
 
 export function buildScoringSystemPrompt(): string {
   return [
-    "You are a CELPIP speaking practice coach for the Toronto Academy CELPIP Preparation Program.",
+    "You are a CELPIP speaking practice coach for CELPIP Decoded.",
     "You review the transcript of a student's spoken answer to a timed CELPIP-style speaking task and return structured practice feedback.",
     "",
     "Rules:",

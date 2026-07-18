@@ -1,10 +1,8 @@
 import { LandingHeader } from "@/components/landing/LandingHeader";
-import { ProgramHeroSection } from "@/components/landing/ProgramHeroSection";
-import { IncludedSection } from "@/components/landing/IncludedSection";
-import { LiveClassesSection } from "@/components/landing/LiveClassesSection";
-import { AiPracticeSection } from "@/components/landing/AiPracticeSection";
-import { CollegeMomentsSection } from "@/components/landing/CollegeMomentsSection";
-import { ProgramOptionsSection } from "@/components/landing/ProgramOptionsSection";
+import { HeroSection } from "@/components/landing/HeroSection";
+import { CoreValuesSection } from "@/components/landing/CoreValuesSection";
+import { PracticeModulesSection } from "@/components/landing/PracticeModulesSection";
+import { HowItWorksSection } from "@/components/landing/HowItWorksSection";
 import { EarlyAccessForm } from "@/components/landing/EarlyAccessForm";
 import { Footer } from "@/components/landing/Footer";
 
@@ -13,12 +11,10 @@ export default function Home() {
     <div className="flex flex-1 flex-col">
       <LandingHeader />
       <main className="flex-1">
-        <ProgramHeroSection />
-        <IncludedSection />
-        <LiveClassesSection />
-        <AiPracticeSection />
-        <CollegeMomentsSection />
-        <ProgramOptionsSection />
+        <HeroSection />
+        <CoreValuesSection />
+        <PracticeModulesSection />
+        <HowItWorksSection />
         <EarlyAccessForm />
       </main>
       <Footer />

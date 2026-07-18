@@ -1,30 +1,38 @@
-import type { Metadata } from "next";
-import { Geist, Geist_Mono, Fraunces } from "next/font/google";
+import type { Metadata, Viewport } from "next";
+import { Inter, Geist_Mono } from "next/font/google";
+import { brand, brandMetadata } from "@/config/brand";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+// Inter is the single humanist sans-serif used across the application.
+const inter = Inter({
+  variable: "--font-inter",
   subsets: ["latin"],
+  display: "swap",
 });
 
+// Monospace used for timers and numeric readouts.
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
 });
 
-// Editorial serif used for the large display headings, matching the
-// Canva reference feel.
-const fraunces = Fraunces({
-  variable: "--font-fraunces",
-  subsets: ["latin"],
-  display: "swap",
-});
-
 export const metadata: Metadata = {
-  title: "Toronto Academy of Education - CELPIP Preparation Program",
-  description:
-    "Practice CELPIP-style speaking on a timer and get AI feedback with the Toronto Academy CELPIP Preparation Program.",
-  applicationName: "Toronto Academy of Education",
+  title: {
+    default: brandMetadata.title,
+    template: brandMetadata.titleTemplate,
+  },
+  description: brand.description,
+  applicationName: brand.productName,
+  openGraph: {
+    title: brandMetadata.title,
+    description: brand.description,
+    siteName: brand.productName,
+    type: "website",
+  },
+};
+
+export const viewport: Viewport = {
+  themeColor: brandMetadata.themeColor,
 };
 
 export default function RootLayout({
@@ -35,7 +43,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} ${fraunces.variable} h-full antialiased`}
+      className={`${inter.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col bg-cream text-foreground">
         {children}

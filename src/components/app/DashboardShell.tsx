@@ -20,15 +20,10 @@ export function DashboardShell({
 
       <footer className="border-t border-ink/10 bg-white">
         <div className="mx-auto w-full max-w-6xl px-5 py-5 sm:px-8">
-          <p className="text-xs leading-5 text-ink/50">
-            Toronto Academy of Education
-          </p>
+          <p className="text-xs leading-5 text-ink/50">CELPIP Decoded</p>
           <p className="mt-1 text-xs leading-5 text-ink/50">
             Practice estimates and AI feedback are for preparation only and
             are not official CELPIP scores.
-          </p>
-          <p className="mt-1 text-xs leading-5 text-ink/40">
-            Powered by Georgo Analytics and Automation
           </p>
         </div>
       </footer>

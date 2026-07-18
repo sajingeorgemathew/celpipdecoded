@@ -16,7 +16,7 @@ import {
 } from "@/features/speaking/task-utils";
 
 export const metadata: Metadata = {
-  title: "Timed Practice - Toronto Academy of Education",
+  title: "Timed Practice",
   description:
     "Run a timed CELPIP speaking practice session with preparation and speaking timers.",
 };

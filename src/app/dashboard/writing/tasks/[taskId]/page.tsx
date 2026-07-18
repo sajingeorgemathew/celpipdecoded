@@ -9,8 +9,8 @@ import {
 } from "@/features/writing/task-utils";
 
 export const metadata: Metadata = {
-  title: "Writing Task - Toronto Academy of Education",
-  description: "Practice a CELPIP writing task with a Toronto Academy prompt.",
+  title: "Writing Task",
+  description: "Practice a CELPIP writing task with a CELPIP Decoded prompt.",
 };
 
 // Detail page for one writing task: prompt, timing, word target,

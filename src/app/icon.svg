@@ -1,0 +1,7 @@
+<svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="CELPIP Decoded">
+  <title>CELPIP Decoded</title>
+  <rect x="1" y="1" width="30" height="30" rx="8" fill="#12314F" />
+  <path d="M12 9.5 H9 V22.5 H12" fill="none" stroke="#FFFFFF" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" />
+  <path d="M20 9.5 H23 V22.5 H20" fill="none" stroke="#FFFFFF" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" />
+  <circle cx="16" cy="16" r="2.6" fill="#0E9F6E" />
+</svg>

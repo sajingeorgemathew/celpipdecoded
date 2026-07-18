@@ -9,8 +9,8 @@ import {
 } from "@/features/speaking/task-utils";
 
 export const metadata: Metadata = {
-  title: "Speaking Task - Toronto Academy of Education",
-  description: "Practice a CELPIP speaking task with a Toronto Academy prompt.",
+  title: "Speaking Task",
+  description: "Practice a CELPIP speaking task with a CELPIP Decoded prompt.",
 };
 
 // Detail page for one speaking task: prompt, timing, skill focus, and

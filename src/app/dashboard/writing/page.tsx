@@ -8,9 +8,9 @@ import type { WritingTaskRow } from "@/features/writing/task-types";
 import { normalizeWritingTask } from "@/features/writing/task-utils";
 
 export const metadata: Metadata = {
-  title: "CELPIP Writing Practice - Toronto Academy of Education",
+  title: "CELPIP Writing Practice",
   description:
-    "Practice CELPIP writing tasks with Toronto Academy practice prompts, timing, and word targets.",
+    "Practice CELPIP writing tasks with CELPIP Decoded practice prompts, timing, and word targets.",
 };
 
 // Writing module overview: hero and the task library grouped by the two

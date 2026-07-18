@@ -15,7 +15,7 @@ import {
 import { DEFAULT_WRITING_TIME_SECONDS } from "@/features/writing/writing-timer";
 
 export const metadata: Metadata = {
-  title: "Timed Writing - Toronto Academy of Education",
+  title: "Timed Writing",
   description:
     "Run a timed CELPIP writing practice session with a live word count.",
 };
