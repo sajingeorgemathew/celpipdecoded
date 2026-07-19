@@ -183,7 +183,7 @@ export const resultCopy = {
   transcriptHeading: "Transcript of your answer",
   transcriptNote:
     "This transcript is generated from your recording and may not be perfect. It is used to support your practice feedback.",
-  actionsLabel: "Continue practicing",
+  actionsLabel: "Continue practising",
   practiceAnotherTask: "Practice another task",
   backToTasks: "Back to speaking tasks",
   tryTaskAgain: "Try this task again",

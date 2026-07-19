@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useState } from "react";
 import { BrandLogo } from "@/components/brand/BrandLogo";
+import { BrandMark } from "@/components/brand/BrandMark";
 
 const navLinks = [
   { label: "How it works", href: "#how-it-works" },
@@ -26,8 +27,16 @@ export function LandingHeader() {
           className="flex min-w-0 items-center"
           aria-label="CELPIP Decoded home"
         >
+          {/* One brand treatment per breakpoint so the header never overflows:
+              full lockup on desktop/tablet, compact lockup on mid phones, and
+              just the mark on the narrowest screens (down to 320px). */}
           <BrandLogo variant="dark" className="hidden sm:inline-flex" />
-          <BrandLogo variant="dark" compact className="sm:hidden" />
+          <BrandLogo
+            variant="dark"
+            compact
+            className="hidden min-[400px]:inline-flex sm:hidden"
+          />
+          <BrandMark size={30} title="" className="min-[400px]:hidden" />
         </Link>
 
         <nav aria-label="Main" className="hidden items-center gap-6 lg:flex">
@@ -51,9 +60,10 @@ export function LandingHeader() {
           </Link>
           <Link
             href="/signup"
-            className="inline-flex h-10 items-center justify-center rounded-full bg-brand px-4 text-sm font-semibold text-white shadow-lg shadow-brand/20 transition-colors hover:bg-brand-dark sm:px-5"
+            className="inline-flex h-10 items-center justify-center whitespace-nowrap rounded-full bg-brand px-4 text-sm font-semibold text-white shadow-lg shadow-brand/20 transition-colors hover:bg-brand-dark sm:px-5"
           >
-            Get started
+            <span className="sm:hidden">Start</span>
+            <span className="hidden sm:inline">Get started</span>
           </Link>
           <button
             type="button"

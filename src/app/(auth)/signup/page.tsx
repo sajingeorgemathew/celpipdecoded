@@ -39,7 +39,7 @@ export default async function SignupPage() {
             Create your account
           </h1>
           <p className="mt-2 text-sm leading-6 text-ink/70">
-            Start practicing for CELPIP in minutes.
+            Start practising for CELPIP in minutes.
           </p>
         </div>
 

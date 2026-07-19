@@ -120,7 +120,7 @@ export const writingResultCopy = {
   responseNote: "This is the response you submitted for evaluation.",
   wordCountLabel: "Word count",
   timeUsedLabel: "Time used",
-  actionsLabel: "Keep practicing",
+  actionsLabel: "Keep practising",
   practiceAnotherTask: "Practice another writing task",
   tryTaskAgain: "Try this task again",
   backToTasks: "Back to writing tasks",
