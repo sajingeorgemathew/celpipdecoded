@@ -19,7 +19,19 @@ CELPIP Decoded is not affiliated with or endorsed by CELPIP and does not provide
 
 - CELPIP Speaking Practice: timed prompts, in-browser recording, private audio storage, transcription, and AI-supported feedback with practice-level estimates and badges.
 - CELPIP Writing Practice: timed writing tasks with word targets and AI-supported evaluation.
-- Reading and Listening: planned for later tickets.
+- CELPIP Mock Tests: full-length, test-style practice. Mock Test 1 Reading is available with four parts and 38 questions.
+- Listening and the Writing mock test: planned for later tickets.
+
+## Mock tests
+
+Mock Test 1 Reading is a timed, four-part practice test scored on the server:
+
+- Route flow: `/dashboard/mock-tests` to the mock-test library, `/dashboard/mock-tests/mock-test-1` for the overview, `/dashboard/mock-tests/mock-test-1/reading` for instructions and the timed exam, and `/dashboard/mock-tests/mock-test-1/reading/results/[sessionId]` for the answer review and raw score.
+- Four parts: Reading Correspondence (11 questions), Reading to Apply a Diagram (8), Reading for Information (9), and Reading for Viewpoints (10). Total 38 questions.
+- The 55-minute practice timer is server-authored: the deadline lives in `expires_at`, so refreshing or leaving and returning never resets it. When time runs out the test is submitted and graded automatically.
+- Answers save automatically as you go, and the test resumes with the same answers and the same clock.
+- Correct answers are stored in a separate answer-key table that browser clients can never read. Grading runs on the server and is idempotent, so repeated submits return the same result.
+- This is a practice score only. It is not an official CELPIP score, and no official CELPIP level is generated.
 
 ## Local setup
 
