@@ -204,7 +204,7 @@ export function EarlyAccessForm() {
 
               <div className="mt-6">
                 <label htmlFor="current_practice_method" className={labelClass}>
-                  How are you practicing speaking right now?
+                  How are you practising speaking right now?
                 </label>
                 <select
                   id="current_practice_method"
