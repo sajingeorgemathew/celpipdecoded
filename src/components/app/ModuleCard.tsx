@@ -14,6 +14,7 @@ export type Module = {
 const moduleRoutes: Record<string, string> = {
   "celpip-speaking": "/dashboard/speaking",
   "celpip-writing": "/dashboard/writing",
+  "celpip-mock-tests": "/dashboard/mock-tests",
 };
 
 // Card for a practice module. Active modules link into the module, coming
